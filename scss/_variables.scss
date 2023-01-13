@@ -1,0 +1,33 @@
+// Main Colors
+$primary: hsl(225, 100%, 94%);
+$secondary: hsl(245, 75%, 52%);
+
+// Pale Colors
+$pale-blue: hsl(225, 100%, 98%);
+$desaturated: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$font1: 'Red Hat Display', sans-serif;
+
+// Typography
+@mixin font-regular($font_size) {
+  font-family: $font1;
+  font-weight: 500;
+  font-size: $font_size;
+} 
+
+@mixin font-bold($font_size) {
+  font-family: $font1;
+  font-weight: 700;
+  font-size: $font_size;
+}
+
+@mixin font-black($font_size) {
+  font-family: $font1;
+  font-weight: 900;
+  font-size: $font_size;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}

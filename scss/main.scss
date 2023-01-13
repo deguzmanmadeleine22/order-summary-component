@@ -1,0 +1,134 @@
+@import 'variables';
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: $primary;
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  background: url(/images/pattern-background-desktop.svg) no-repeat center center/cover;
+  max-width: 100%;
+  height: 100vh;
+  background-position-y: -400px;
+}
+
+.container {
+  min-height: 702px;
+  width: 452px;
+  padding: 9rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  .order-summary {
+    background: #fff;
+    min-height: 702px;
+    width: 400px;
+    border-radius: 20px;
+    
+    .order-image {
+      width: 100%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+   
+    }
+  }
+}
+
+.payment,
+.cancel,
+.plan-selection,
+.change {
+  @include font-bold(1rem)
+}
+
+
+.order-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 50px !important;
+  h1 {
+    @include font-black(2rem);
+    @include center;
+  }
+  p {
+    color: $desaturated;
+    @include font-regular(1rem);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  // padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.change {
+  color: $secondary;
+  text-decoration: underline;
+}
+
+.current-plan {
+  text-align: start;
+  padding: 1rem;
+  font-weight: 900;
+}
+
+.price {
+  font-weight: 500;
+  color: $desaturated
+}
+
+.cancel {
+  color: $desaturated;
+}
+
+.payment {
+  background: $secondary;
+  margin-bottom: 35px !important;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 18px 20px  $secondary;
+  box-shadow: inset 0 -3em 10rem $secondary,
+    .2rem 1rem 25px hsl(243, 58%, 81%);
+}
+
+.btn:hover {
+  background: $primary;
+}
+
+a.cancel:hover {
+  color: $dark-blue;
+  text-decoration: none;
+}
+
+a.change:hover {
+  color: hsl(253, 50%, 65%);
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    background: url(/images/pattern-background-mobile.svg) no-repeat center center/cover;
+    background-position-y: -2rem;
+  }
+
+  .order-summary {
+    background: #fff;
+    min-height: 702px;
+    width: 400px;
+    border-radius: 20px;
+}
+}
